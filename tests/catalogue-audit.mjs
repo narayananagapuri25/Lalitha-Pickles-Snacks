@@ -28,7 +28,7 @@ for (const [id, price] of Object.entries({ chekkalu: 400, murukulu: 400, mixture
   const line = app.split('\n').find((row) => row.includes(`id: '${id}'`));
   assert.ok(line?.includes(`price: ${price}`), `Unexpected price for ${id}`);
 }
-for (const image of ['mango.webp', 'usiri-amla.webp', 'lemon.webp', 'allam-sweet.webp', 'gongura.webp', 'sesame-mango.webp', 'tomato.webp']) {
+for (const image of ['mango.webp', 'usiri-amla.webp', 'lemon.webp', 'allam-sweet.webp', 'gongura.webp', 'sesame-mango.webp', 'tomato.webp', 'icon-192.png', 'icon-512.png', 'apple-touch-icon.png']) {
   assert.ok(readdirSync(join(root, 'assets')).includes(image), `Missing asset ${image}`);
 }
 assert.ok(html.includes('+91 74163 38403'));
