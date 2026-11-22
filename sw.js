@@ -2,7 +2,6 @@
 const CACHE_NAME = 'lalitha-site-v1';
 const APP_SHELL = [
   './', './index.html', './styles.css', './app.js', './favicon.svg', './manifest.webmanifest',
-  './assets/pickle-collection.webp', './assets/brand-poster.webp',
   './assets/mango.webp', './assets/usiri-amla.webp', './assets/lemon.webp',
   './assets/allam-sweet.webp', './assets/gongura.webp', './assets/sesame-mango.webp', './assets/tomato.webp'
 ];
