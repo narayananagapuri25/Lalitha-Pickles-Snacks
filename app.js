@@ -104,7 +104,6 @@ function updateCartUI() {
   $('#floatingCartSummary').textContent = `${quantity} ${quantity === 1 ? 'item' : 'items'} in your bag`;
   $('#floatingCartTotal').textContent = money(subtotal);
   $('#cartSubtotal').textContent = money(subtotal);
-  $('#checkoutTotal').textContent = money(subtotal);
   $('#cartSummary').hidden = quantity === 0;
   $('#emptyCart').hidden = quantity !== 0;
 }
