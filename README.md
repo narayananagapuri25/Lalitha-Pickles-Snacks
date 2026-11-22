@@ -28,6 +28,12 @@ Then open `http://localhost:8080`.
 
 Customers add products to the bag, enter their name, mobile number and delivery address, then send the prepared order through WhatsApp to **+91 74163 38403**. The alternate contact is **+91 99595 62940**. The website does not collect payments or store orders. Delivery availability, delivery charges, stock and payment details are confirmed directly by the business on WhatsApp.
 
+## Product photography
+
+The storefront uses an optimized AI-generated photo sheet for the seven pickle varieties, plus traditional snack and sweet imagery in place of emoji placeholders. The seven pickle images are separate sheet cells; the snack and sweet categories use shared category imagery because individual product photos were not supplied.
+
+The source photo sheet is stored as split base64 text parts under `.github/asset-parts/`. GitHub Actions rebuilds `assets/product-photo-sprite.avif` before running checks and publishing the site. To preview locally, run `bash scripts/build-assets.sh` once before starting the static server.
+
 ## Catalogue source
 
 Product names and prices are based on the menu images provided for this repository. Pickle prices are shown for 250 g / 500 g / 1 kg. Snack and sweet prices are shown for 1 kg. Update `PRODUCTS` in `app.js` only when the business supplies an authorised catalogue change.
