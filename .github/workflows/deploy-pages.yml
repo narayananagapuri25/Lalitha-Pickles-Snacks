@@ -24,6 +24,9 @@ jobs:
       - name: Check out source
         uses: actions/checkout@v4
 
+      - name: Build generated product photo asset
+        run: bash scripts/build-assets.sh
+
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
