@@ -1,6 +1,6 @@
 # Lalitha Pickles & Snacks
 
-A responsive, installable storefront for Lalitha Pickles & Snacks in Chengicherla, Hyderabad.
+A responsive, strictly static storefront for Lalitha Pickles & Snacks in Chengicherla, Hyderabad.
 
 ## Features
 
@@ -9,7 +9,7 @@ A responsive, installable storefront for Lalitha Pickles & Snacks in Chengicherl
 - Pickle pack selector for 250 g, 500 g and 1 kg.
 - Product search, category filters, shopping bag and quantity controls.
 - WhatsApp order hand-off with selected items, quantities, subtotal and delivery details.
-- Click-to-call and WhatsApp contact links for both supplied phone numbers.
+- WhatsApp contact links for both supplied phone numbers.
 - Address and map directions link for the supplied Chengicherla address.
 - Static, mobile-friendly storefront with no backend or database.
 - Keyboard-accessible controls, semantic sections, metadata and reduced-motion support.
@@ -26,7 +26,7 @@ Then open `http://localhost:8080`.
 
 ## Order workflow
 
-Customers add products to the bag, enter their name, mobile number and delivery address, then send the prepared order through WhatsApp to **+91 74163 38403**. The alternate contact is **+91 99595 62940**. The website does not collect payments or store orders. Delivery availability, delivery charges, stock and payment details are confirmed directly by the business on WhatsApp.
+Customers add products to the bag and send the prepared order through WhatsApp to **+91 74163 38403**. The alternate contact is **+91 99595 62940**. The website does not collect names, phone numbers or delivery addresses, does not collect payments, and does not store orders. Customers share their details in WhatsApp, where the business confirms availability, delivery charges, stock and payment details.
 
 ## Catalogue source
 
@@ -49,16 +49,17 @@ This business website is intentionally a simple WhatsApp-first storefront. **The
 
 The website has no customer details form. Customer details are exchanged only in WhatsApp after the customer chooses to send a message. The website does not collect or transmit personal details to a separate backend.
 
-## Deploy with GitHub Pages
+## Static hosting with GitHub Pages
 
-The repository includes a manual GitHub Pages deployment workflow. To publish the public storefront:
+This repository is published as ordinary static files from the `main` branch. It does not use GitHub Actions, workflow tokens, a build pipeline, Cloudflare Workers, a server-side runtime or a database.
+
+To enable GitHub Pages once:
 
 1. Open **Settings → Pages** in this repository.
-2. Under **Build and deployment**, set **Source** to **GitHub Actions** and save.
-3. Open **Actions → Deploy website to GitHub Pages → Run workflow** and run it on `main`.
-4. When the deployment completes, GitHub will show the published website URL in the Pages environment and repository Pages settings.
+2. Under **Build and deployment → Source**, select **Deploy from a branch**.
+3. Select branch **main** and folder **/(root)**, then save.
 
-The website is static; no paid hosting plan, build process, API key or server is needed for this WhatsApp-first version.
+After this one-time setting, GitHub Pages publishes the static files directly from the root of `main` whenever the branch changes. No workflow or deployment token is required.
 
 ## Business operations not yet connected
 
