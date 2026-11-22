@@ -1,5 +1,5 @@
 'use strict';
-const CACHE_NAME = 'lalitha-site-v1';
+const CACHE_NAME = 'lalitha-site-v2';
 const APP_SHELL = [
   './', './index.html', './styles.css', './app.js', './favicon.svg', './manifest.webmanifest',
   './assets/icon-192.png', './assets/icon-512.png', './assets/apple-touch-icon.png',
