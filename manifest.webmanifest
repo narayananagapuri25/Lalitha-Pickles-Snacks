@@ -1,0 +1,13 @@
+{
+  "name": "Lalitha Pickles & Snacks",
+  "short_name": "Lalitha",
+  "description": "Homemade goodness, traditional taste.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#fffdf7",
+  "theme_color": "#123c2b",
+  "icons": [
+    { "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
