@@ -41,13 +41,13 @@ The site can be hosted on any static hosting service. The included `manifest.web
 This business website is intentionally a simple WhatsApp-first storefront. **There is no dashboard, owner login, admin panel, database, server-side order system or online payment flow.**
 
 - Customers browse the menu, select products and pack sizes, and build a shopping bag on the website.
-- At checkout, the website prepares an order message with the customer's details, selected items, quantities and product subtotal.
-- The customer sends that message directly to **+91 74163 38403** on WhatsApp.
+- The bag's **Send order on WhatsApp** button opens WhatsApp directly with the selected items, pack sizes, quantities and product subtotal already written in the message.
+- Customers share their name, mobile number, delivery address and any special instructions inside the WhatsApp conversation itself.
 - Product questions and delivery enquiries also go through WhatsApp. The second WhatsApp contact is **+91 99595 62940**.
 - The business confirms availability, delivery charge, payment method and the order directly in the WhatsApp conversation.
 - The website does not store customer details or orders and does not claim an order is confirmed merely because WhatsApp opens.
 
-The customer mobile number and delivery address are included only in the message that the customer chooses to send. The website does not transmit these details to a separate backend.
+The website has no customer details form. Customer details are exchanged only in WhatsApp after the customer chooses to send a message. The website does not collect or transmit personal details to a separate backend.
 
 ## Deploy with GitHub Pages
 
