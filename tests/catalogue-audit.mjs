@@ -34,4 +34,6 @@ for (const image of ['mango.webp', 'usiri-amla.webp', 'lemon.webp', 'allam-sweet
 assert.ok(html.includes('+91 74163 38403'));
 assert.ok(html.includes('+91 99595 62940'));
 assert.ok(html.includes('Rajesh Nagar Colony'));
-console.log('Catalogue audit passed: 20 unique products, all 20 supplied prices, 9 image assets, contact and address details.');
+assert.ok(html.includes('application/ld+json'), 'Business structured data should be present');
+assert.ok(html.includes('Street No. 4, Phase III, Rajesh Nagar Colony'), 'Full business address should be present');
+console.log('Catalogue audit passed: 20 unique products, supplied prices, 10 photo/install assets, contact and business details.');
