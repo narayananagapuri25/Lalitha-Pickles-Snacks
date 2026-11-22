@@ -11,7 +11,7 @@ A responsive, installable storefront for Lalitha Pickles & Snacks in Chengicherl
 - WhatsApp order hand-off with selected items, quantities, subtotal and delivery details.
 - Click-to-call and WhatsApp contact links for both supplied phone numbers.
 - Address and map directions link for the supplied Chengicherla address.
-- Installable PWA shell with basic offline caching.
+- Static, mobile-friendly storefront with no backend or database.
 - Keyboard-accessible controls, semantic sections, metadata and reduced-motion support.
 
 ## Run locally
@@ -34,7 +34,7 @@ Product names and prices are based on the menu images provided for this reposito
 
 ## Deployment
 
-The site can be hosted on any static hosting service. The included `manifest.webmanifest` and `sw.js` support installation and basic caching when served over HTTPS (or localhost). Configure the hosting provider to publish the repository root; no server-side credentials are required.
+The site can be hosted on any static hosting service. The site is served as ordinary static files over HTTPS. It does not register a service worker, run a server-side Worker, or require a backend. Configure the hosting provider to publish the repository root; no server-side credentials are required.
 
 ## Ordering model — WhatsApp only
 

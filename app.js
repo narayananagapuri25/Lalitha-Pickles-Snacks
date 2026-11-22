@@ -264,6 +264,11 @@ updateCartUI();
 initEvents();
 $('#year').textContent = new Date().getFullYear();
 
-if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
-  window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(() => {}));
+// Remove a previously installed service worker from older versions. This site does not register or run workers.
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.getRegistrations()
+      .then((registrations) => Promise.all(registrations.map((registration) => registration.unregister())))
+      .catch(() => {});
+  });
 }
