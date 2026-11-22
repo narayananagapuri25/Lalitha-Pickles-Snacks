@@ -1,10 +1,11 @@
 'use strict';
-const CACHE_NAME = 'lalitha-site-v2';
+const CACHE_NAME = 'lalitha-site-v3';
 const APP_SHELL = [
   './', './index.html', './styles.css', './app.js', './favicon.svg', './manifest.webmanifest',
   './assets/icon-192.png', './assets/icon-512.png', './assets/apple-touch-icon.png',
   './assets/mango.webp', './assets/usiri-amla.webp', './assets/lemon.webp',
-  './assets/allam-sweet.webp', './assets/gongura.webp', './assets/sesame-mango.webp', './assets/tomato.webp'
+  './assets/allam-sweet.webp', './assets/gongura.webp', './assets/sesame-mango.webp', './assets/tomato.webp',
+  './assets/snacks-assortment.webp', './assets/sweets-assortment.webp'
 ];
 self.addEventListener('install', (event) => {
   event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(APP_SHELL)).then(() => self.skipWaiting()));
