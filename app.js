@@ -140,27 +140,22 @@ function closeDialog(dialogId) {
   if (!$('dialog[open]')) document.body.classList.remove('dialog-open');
 }
 
-function buildWhatsAppMessage(formData) {
+function buildWhatsAppMessage() {
   const lines = [...cart.values()];
   const orderLines = lines.map((line) => `• ${line.name} (${line.weight}) × ${line.quantity} — ${money(line.price * line.quantity)}`);
-  const message = [
-    'Hello Lalitha Pickles & Snacks! I would like to place an order.',
+  return [
+    'Hello Lalitha Pickles & Snacks! I would like to place this order.',
     '',
-    'ORDER DETAILS',
+    'MY ORDER',
     ...orderLines,
     '',
     `Product subtotal: ${money(cartSubtotal())}`,
     '(Delivery charges to be confirmed)',
     '',
-    'CUSTOMER DETAILS',
-    `Name: ${formData.get('name').trim()}`,
-    `Mobile: ${formData.get('phone').trim()}`,
-    `Delivery address: ${formData.get('address').trim()}`,
-    formData.get('note').trim() ? `Note: ${formData.get('note').trim()}` : null,
-    '',
-    'Please confirm product availability, delivery charge and payment details. Thank you!'
-  ].filter((line) => line !== null);
-  return message.join('\n');
+    'Please confirm availability, delivery charge and payment options.',
+    'I will share my name, mobile number and delivery address here on WhatsApp.',
+    'Thank you!'
+  ].join('\n');
 }
 
 function initEvents() {
@@ -213,33 +208,14 @@ function initEvents() {
   });
 
   $('#startCheckout').addEventListener('click', () => {
-    if (cart.size === 0) return;
-    $('#checkoutTotal').textContent = money(cartSubtotal());
-    closeDialog('cartDialog');
-    openDialog('checkoutDialog');
-  });
-  $('[name="phone"]', $('#checkoutForm')).addEventListener('input', (event) => event.currentTarget.setCustomValidity(''));
-
-  $('#checkoutForm').addEventListener('submit', (event) => {
-    event.preventDefault();
     if (cart.size === 0) {
-      closeDialog('checkoutDialog');
       showToast('Your bag is empty. Add an item to continue.');
       return;
     }
-    const formData = new FormData(event.currentTarget);
-    const phone = String(formData.get('phone')).replace(/\D/g, '');
-    if (phone.length < 10 || phone.length > 13) {
-      $('[name="phone"]', event.currentTarget).setCustomValidity('Please enter a valid phone number.');
-      $('[name="phone"]', event.currentTarget).reportValidity();
-      return;
-    }
-    $('[name="phone"]', event.currentTarget).setCustomValidity('');
-    const message = buildWhatsAppMessage(formData);
+    const message = buildWhatsAppMessage();
     const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
-    closeDialog('checkoutDialog');
-    window.open(url, '_blank', 'noopener,noreferrer');
-    showToast('Your order message is ready in WhatsApp.');
+    closeDialog('cartDialog');
+    window.location.assign(url);
   });
 
   $$('[data-close]').forEach((button) => button.addEventListener('click', () => closeDialog(button.dataset.close)));
