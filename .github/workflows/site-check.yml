@@ -23,9 +23,6 @@ jobs:
         with:
           node-version: 22
 
-      - name: Build generated product photo asset
-        run: bash scripts/build-assets.sh
-
       - name: Check JavaScript syntax
         run: |
           node --check app.js

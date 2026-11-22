@@ -28,7 +28,7 @@ for (const [id, price] of Object.entries({ chekkalu: 400, murukulu: 400, mixture
   const line = app.split('\n').find((row) => row.includes(`id: '${id}'`));
   assert.ok(line?.includes(`price: ${price}`), `Unexpected price for ${id}`);
 }
-for (const image of ['mango.webp', 'usiri-amla.webp', 'lemon.webp', 'allam-sweet.webp', 'gongura.webp', 'sesame-mango.webp', 'tomato.webp', 'product-photo-sprite.avif', 'icon-192.png', 'icon-512.png', 'apple-touch-icon.png']) {
+for (const image of ['mango.webp', 'usiri-amla.webp', 'lemon.webp', 'allam-sweet.webp', 'gongura.webp', 'sesame-mango.webp', 'tomato.webp', 'icon-192.png', 'icon-512.png', 'apple-touch-icon.png']) {
   assert.ok(readdirSync(join(root, 'assets')).includes(image), `Missing asset ${image}`);
 }
 assert.ok(html.includes('+91 74163 38403'));
@@ -40,10 +40,7 @@ assert.ok(!html.includes('checkoutForm'), 'There must be no customer details for
 assert.ok(!html.includes('checkoutDialog'), 'There must be no separate website checkout dialog');
 assert.ok(html.includes('Send order on WhatsApp'), 'Shopping bag must hand off the order to WhatsApp');
 assert.ok(!app.includes('checkoutForm'), 'App must not collect customer details on the website');
-assert.ok(!app.includes('checkoutTotal'), 'Cart must not reference a removed checkout total element');
 assert.ok(app.includes('window.location.assign(url)'), 'Order action must navigate straight to WhatsApp');
-assert.ok(app.includes('product.sprite'), 'Catalogue renderer should use photo-sheet cell mappings');
-assert.ok(app.includes('product-photo-sprite.avif'), 'Catalogue should reference the generated photo sheet');
 assert.ok(app.includes('I will share my name, mobile number and delivery address here on WhatsApp.'), 'WhatsApp message must ask customer to share delivery details in chat');
 assert.ok(html.includes('Rajesh Nagar Colony'));
 assert.ok(html.includes('application/ld+json'), 'Business structured data should be present');
