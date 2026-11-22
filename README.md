@@ -39,3 +39,19 @@ The site can be hosted on any static hosting service. The included `manifest.web
 ## Important scope notes
 
 This first storefront intentionally uses WhatsApp as the order hand-off. No online payment gateway, database-backed inventory, owner login or order-management backend is configured because the business has not supplied payment, inventory, or backend credentials and policies. Do not treat an opened WhatsApp message as a confirmed order; wait for the business to reply.
+
+
+## Deploy with GitHub Pages
+
+The repository includes a manual GitHub Pages deployment workflow. To publish the public storefront:
+
+1. Open **Settings → Pages** in this repository.
+2. Under **Build and deployment**, set **Source** to **GitHub Actions** and save.
+3. Open **Actions → Deploy website to GitHub Pages → Run workflow** and run it on `main`.
+4. When the deployment completes, GitHub will show the published website URL in the Pages environment and repository Pages settings.
+
+The website is static; no paid hosting plan, build process, API key or server is needed for this WhatsApp-first version.
+
+## Business operations not yet connected
+
+This repository does not currently include a secure owner/admin portal, server-side order database, stock management, automated delivery pricing or online payment processing. Those features need the business's confirmed operating rules and a secure backend. The current website sends the customer-prepared order to WhatsApp and does not store customer details or claim an order is confirmed.
