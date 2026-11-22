@@ -33,6 +33,9 @@ for (const image of ['mango.webp', 'usiri-amla.webp', 'lemon.webp', 'allam-sweet
 }
 assert.ok(html.includes('+91 74163 38403'));
 assert.ok(html.includes('+91 99595 62940'));
+assert.ok(html.includes('https://wa.me/917416338403'));
+assert.ok(html.includes('https://wa.me/919959562940'));
+assert.ok(!html.includes('tel:'), 'Customer contact actions must use WhatsApp rather than phone links');
 assert.ok(html.includes('Rajesh Nagar Colony'));
 assert.ok(html.includes('application/ld+json'), 'Business structured data should be present');
 assert.ok(html.includes('Street No. 4, Phase III, Rajesh Nagar Colony'), 'Full business address should be present');
