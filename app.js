@@ -1,26 +1,26 @@
 'use strict';
 
 const PRODUCTS = [
-  { id: 'mango', name: 'Mango', category: 'pickles', image: 'assets/mango.webp', prices: { '250 g': 150, '500 g': 300, '1 kg': 550 } },
-  { id: 'usiri-amla', name: 'Usiri (Amla)', category: 'pickles', image: 'assets/usiri-amla.webp', prices: { '250 g': 150, '500 g': 300, '1 kg': 550 } },
-  { id: 'lemon', name: 'Lemon', category: 'pickles', image: 'assets/lemon.webp', prices: { '250 g': 150, '500 g': 300, '1 kg': 550 } },
-  { id: 'allam-sweet', name: 'Allam (Sweet)', category: 'pickles', image: 'assets/allam-sweet.webp', prices: { '250 g': 200, '500 g': 400, '1 kg': 650 } },
-  { id: 'gongura', name: 'Gongura', category: 'pickles', image: 'assets/gongura.webp', prices: { '250 g': 150, '500 g': 300, '1 kg': 500 } },
-  { id: 'sesame-mango', name: 'Sesame Mango', category: 'pickles', image: 'assets/sesame-mango.webp', prices: { '250 g': 200, '500 g': 400, '1 kg': 750 } },
-  { id: 'tomato', name: 'Tomato', category: 'pickles', image: 'assets/tomato.webp', prices: { '250 g': 100, '500 g': 200, '1 kg': 400 } },
-  { id: 'chekkalu', name: 'Chekkalu', category: 'snacks', price: 400, weight: '1 kg', emoji: '🥨' },
-  { id: 'murukulu', name: 'Murukulu', category: 'snacks', price: 400, weight: '1 kg', emoji: '🍥' },
-  { id: 'mixture', name: 'Mixture', category: 'snacks', price: 400, weight: '1 kg', emoji: '🥜' },
-  { id: 'sakinalu', name: 'Sakinalu', category: 'snacks', price: 400, weight: '1 kg', emoji: '⭕' },
-  { id: 'arshalu', name: 'Arshalu', category: 'snacks', price: 400, weight: '1 kg', emoji: '🥨' },
-  { id: 'boondi', name: 'Boondi', category: 'snacks', price: 400, weight: '1 kg', emoji: '🟠' },
-  { id: 'chekodi', name: 'Chekodi', category: 'snacks', price: 400, weight: '1 kg', emoji: '⭕' },
-  { id: 'ragi-laddu', name: 'Ragi Laddu', category: 'sweets', price: 500, weight: '1 kg', emoji: '🟤' },
-  { id: 'flax-seed-laddu', name: 'Flax Seed Laddu', category: 'sweets', price: 500, weight: '1 kg', emoji: '🟤' },
-  { id: 'sununda', name: 'Sununda', category: 'sweets', price: 600, weight: '1 kg', emoji: '🟡' },
-  { id: 'nuvvula-laddu', name: 'Nuvvula Laddu', category: 'sweets', price: 500, weight: '1 kg', emoji: '🟡' },
-  { id: 'palli-laddu', name: 'Palli Laddu', category: 'sweets', price: 500, weight: '1 kg', emoji: '🟤' },
-  { id: 'dry-fruit-laddu', name: 'Dry Fruit Laddu', category: 'sweets', price: 1400, weight: '1 kg', emoji: '🟡' }
+  { id: 'mango', name: 'Mango', category: 'pickles', sprite: [0, 0], prices: { '250 g': 150, '500 g': 300, '1 kg': 550 } },
+  { id: 'usiri-amla', name: 'Usiri (Amla)', category: 'pickles', sprite: [1, 0], prices: { '250 g': 150, '500 g': 300, '1 kg': 550 } },
+  { id: 'lemon', name: 'Lemon', category: 'pickles', sprite: [2, 0], prices: { '250 g': 150, '500 g': 300, '1 kg': 550 } },
+  { id: 'allam-sweet', name: 'Allam (Sweet)', category: 'pickles', sprite: [3, 0], prices: { '250 g': 200, '500 g': 400, '1 kg': 650 } },
+  { id: 'gongura', name: 'Gongura', category: 'pickles', sprite: [0, 1], prices: { '250 g': 150, '500 g': 300, '1 kg': 500 } },
+  { id: 'sesame-mango', name: 'Sesame Mango', category: 'pickles', sprite: [1, 1], prices: { '250 g': 200, '500 g': 400, '1 kg': 750 } },
+  { id: 'tomato', name: 'Tomato', category: 'pickles', sprite: [2, 1], prices: { '250 g': 100, '500 g': 200, '1 kg': 400 } },
+  { id: 'chekkalu', name: 'Chekkalu', category: 'snacks', price: 400, weight: '1 kg', sprite: [0, 2] },
+  { id: 'murukulu', name: 'Murukulu', category: 'snacks', price: 400, weight: '1 kg', sprite: [1, 2] },
+  { id: 'mixture', name: 'Mixture', category: 'snacks', price: 400, weight: '1 kg', sprite: [0, 2] },
+  { id: 'sakinalu', name: 'Sakinalu', category: 'snacks', price: 400, weight: '1 kg', sprite: [1, 2] },
+  { id: 'arshalu', name: 'Arshalu', category: 'snacks', price: 400, weight: '1 kg', sprite: [0, 2] },
+  { id: 'boondi', name: 'Boondi', category: 'snacks', price: 400, weight: '1 kg', sprite: [1, 2] },
+  { id: 'chekodi', name: 'Chekodi', category: 'snacks', price: 400, weight: '1 kg', sprite: [0, 2] },
+  { id: 'ragi-laddu', name: 'Ragi Laddu', category: 'sweets', price: 500, weight: '1 kg', sprite: [2, 2] },
+  { id: 'flax-seed-laddu', name: 'Flax Seed Laddu', category: 'sweets', price: 500, weight: '1 kg', sprite: [3, 2] },
+  { id: 'sununda', name: 'Sununda', category: 'sweets', price: 600, weight: '1 kg', sprite: [2, 2] },
+  { id: 'nuvvula-laddu', name: 'Nuvvula Laddu', category: 'sweets', price: 500, weight: '1 kg', sprite: [3, 2] },
+  { id: 'palli-laddu', name: 'Palli Laddu', category: 'sweets', price: 500, weight: '1 kg', sprite: [2, 2] },
+  { id: 'dry-fruit-laddu', name: 'Dry Fruit Laddu', category: 'sweets', price: 1400, weight: '1 kg', sprite: [3, 2] }
 ];
 
 const CATEGORY_NAMES = { pickles: 'Pickles', snacks: 'Snacks', sweets: 'Sweets' };
@@ -47,13 +47,18 @@ function renderProducts() {
     return categoryMatch && searchMatch;
   });
   $('#productGrid').innerHTML = results.map((product) => {
-    const imageMarkup = product.image
-      ? `<img src="${product.image}" alt="${escapeHtml(product.name)} pickle in a serving bowl" loading="lazy"><span class="product-tag">Homemade pickle</span>`
-      : `<div class="product-emoji" aria-hidden="true">${product.emoji}</div><span class="product-tag">Traditional ${product.category === 'snacks' ? 'snack' : 'sweet'}</span>`;
+    const [column, row] = product.sprite;
+    const backgroundX = (column / 3) * 100;
+    const backgroundY = (row / 2) * 100;
+    const photoLabel = product.category === 'pickles'
+      ? `${product.name} pickle served in a traditional brass bowl`
+      : `Traditional homemade ${CATEGORY_NAMES[product.category].toLocaleLowerCase('en-IN')} selection`;
+    const tag = product.category === 'pickles' ? 'Homemade pickle' : `Traditional ${product.category === 'snacks' ? 'snack' : 'sweet'}`;
+    const imageMarkup = `<div class="product-visual product-photo" role="img" aria-label="${escapeHtml(photoLabel)}" style="background-position:${backgroundX}% ${backgroundY}%"><span class="product-tag">${tag}</span></div>`;
     const configuration = product.prices
       ? `<label class="sr-only" for="size-${product.id}">Choose pack size for ${escapeHtml(product.name)}</label><select class="size-select" id="size-${product.id}" data-size-for="${product.id}">${Object.entries(product.prices).map(([weight, price]) => `<option value="${weight}">${weight} · ${money(price)}</option>`).join('')}</select><strong class="product-price" data-price-for="${product.id}">${money(Object.values(product.prices)[0])}</strong>`
       : `<span class="fixed-weight">${product.weight}</span><strong class="product-price">${money(product.price)}</strong>`;
-    return `<article class="product-card"><div class="product-visual ${product.image ? '' : 'no-image'}">${imageMarkup}</div><div class="product-info"><div class="product-category">${CATEGORY_NAMES[product.category]}</div><h3>${escapeHtml(product.name)}</h3><div class="product-config">${configuration}</div><button class="add-button" type="button" data-add="${product.id}" aria-label="Add ${escapeHtml(product.name)} to bag"><span>+</span> Add to bag</button></div></article>`;
+    return `<article class="product-card">${imageMarkup}<div class="product-info"><div class="product-category">${CATEGORY_NAMES[product.category]}</div><h3>${escapeHtml(product.name)}</h3><div class="product-config">${configuration}</div><button class="add-button" type="button" data-add="${product.id}" aria-label="Add ${escapeHtml(product.name)} to bag"><span>+</span> Add to bag</button></div></article>`;
   }).join('');
   $('#resultCount').textContent = `${results.length} ${results.length === 1 ? 'item' : 'items'}`;
   $('#noResults').hidden = results.length !== 0;
@@ -252,6 +257,9 @@ function validateCatalogue() {
     if (JSON.stringify(actual) !== JSON.stringify(values)) throw new Error(`Pickle price mismatch: ${id}`);
   }
   if (PRODUCTS.length !== 20) throw new Error(`Expected 20 catalogue items, got ${PRODUCTS.length}`);
+  if (PRODUCTS.some((product) => !Array.isArray(product.sprite) || product.sprite.length !== 2 || product.sprite.some((cell) => !Number.isInteger(cell) || cell < 0 || cell > 3) || product.sprite[1] > 2)) {
+    throw new Error('Every product must map to a valid cell in the 4 × 3 photo sheet');
+  }
 }
 
 validateCatalogue();
