@@ -1,13 +1,13 @@
 'use strict';
 
 const PRODUCTS = [
-  { id: 'mango', name: 'Mango', category: 'pickles', image: 'assets/mango.webp', prices: { '250 g': 150, '500 g': 300, '1 kg': 550 } },
-  { id: 'usiri-amla', name: 'Usiri (Amla)', category: 'pickles', image: 'assets/usiri-amla.webp', prices: { '250 g': 150, '500 g': 300, '1 kg': 550 } },
-  { id: 'lemon', name: 'Lemon', category: 'pickles', image: 'assets/lemon.webp', prices: { '250 g': 150, '500 g': 300, '1 kg': 550 } },
-  { id: 'allam-sweet', name: 'Allam (Sweet)', category: 'pickles', image: 'assets/allam-sweet.webp', prices: { '250 g': 200, '500 g': 400, '1 kg': 650 } },
-  { id: 'gongura', name: 'Gongura', category: 'pickles', image: 'assets/gongura.webp', prices: { '250 g': 150, '500 g': 300, '1 kg': 500 } },
-  { id: 'sesame-mango', name: 'Sesame Mango', category: 'pickles', image: 'assets/sesame-mango.webp', prices: { '250 g': 200, '500 g': 400, '1 kg': 750 } },
-  { id: 'tomato', name: 'Tomato', category: 'pickles', image: 'assets/tomato.webp', prices: { '250 g': 100, '500 g': 200, '1 kg': 400 } },
+  { id: 'mango', name: 'Mango', category: 'pickles', image: 'assets/mango.webp', imageAlt: 'Homemade mango pickle in a serving bowl', prices: { '250 g': 150, '500 g': 300, '1 kg': 550 } },
+  { id: 'usiri-amla', name: 'Usiri (Amla)', category: 'pickles', image: 'assets/usiri-amla.webp', imageAlt: 'Homemade usiri amla pickle in a serving bowl', prices: { '250 g': 150, '500 g': 300, '1 kg': 550 } },
+  { id: 'lemon', name: 'Lemon', category: 'pickles', image: 'assets/lemon.webp', imageAlt: 'Homemade lemon pickle in a serving bowl', prices: { '250 g': 150, '500 g': 300, '1 kg': 550 } },
+  { id: 'allam-sweet', name: 'Allam (Sweet)', category: 'pickles', image: 'assets/allam-sweet.webp', imageAlt: 'Homemade sweet ginger pickle in a serving bowl', prices: { '250 g': 200, '500 g': 400, '1 kg': 650 } },
+  { id: 'gongura', name: 'Gongura', category: 'pickles', image: 'assets/gongura.webp', imageAlt: 'Homemade gongura pickle in a serving bowl', prices: { '250 g': 150, '500 g': 300, '1 kg': 500 } },
+  { id: 'sesame-mango', name: 'Sesame Mango', category: 'pickles', image: 'assets/sesame-mango.webp', imageAlt: 'Homemade sesame mango pickle in a serving bowl', prices: { '250 g': 200, '500 g': 400, '1 kg': 750 } },
+  { id: 'tomato', name: 'Tomato', category: 'pickles', image: 'assets/tomato.webp', imageAlt: 'Homemade tomato pickle in a serving bowl', prices: { '250 g': 100, '500 g': 200, '1 kg': 400 } },
   { id: 'chekkalu', name: 'Chekkalu', category: 'snacks', price: 400, weight: '1 kg', image: 'assets/snacks-assortment.webp', imageAlt: 'Traditional Telangana snacks assortment; representative image', imageTag: 'Snack assortment' },
   { id: 'murukulu', name: 'Murukulu', category: 'snacks', price: 400, weight: '1 kg', image: 'assets/snacks-assortment.webp', imageAlt: 'Traditional Telangana snacks assortment; representative image', imageTag: 'Snack assortment' },
   { id: 'mixture', name: 'Mixture', category: 'snacks', price: 400, weight: '1 kg', image: 'assets/snacks-assortment.webp', imageAlt: 'Traditional Telangana snacks assortment; representative image', imageTag: 'Snack assortment' },
