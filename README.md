@@ -36,10 +36,18 @@ Product names and prices are based on the menu images provided for this reposito
 
 The site can be hosted on any static hosting service. The included `manifest.webmanifest` and `sw.js` support installation and basic caching when served over HTTPS (or localhost). Configure the hosting provider to publish the repository root; no server-side credentials are required.
 
-## Important scope notes
+## Ordering model — WhatsApp only
 
-This first storefront intentionally uses WhatsApp as the order hand-off. No online payment gateway, database-backed inventory, owner login or order-management backend is configured because the business has not supplied payment, inventory, or backend credentials and policies. Do not treat an opened WhatsApp message as a confirmed order; wait for the business to reply.
+This business website is intentionally a simple WhatsApp-first storefront. **There is no dashboard, owner login, admin panel, database, server-side order system or online payment flow.**
 
+- Customers browse the menu, select products and pack sizes, and build a shopping bag on the website.
+- At checkout, the website prepares an order message with the customer's details, selected items, quantities and product subtotal.
+- The customer sends that message directly to **+91 74163 38403** on WhatsApp.
+- Product questions and delivery enquiries also go through WhatsApp. The second WhatsApp contact is **+91 99595 62940**.
+- The business confirms availability, delivery charge, payment method and the order directly in the WhatsApp conversation.
+- The website does not store customer details or orders and does not claim an order is confirmed merely because WhatsApp opens.
+
+The customer mobile number and delivery address are included only in the message that the customer chooses to send. The website does not transmit these details to a separate backend.
 
 ## Deploy with GitHub Pages
 
