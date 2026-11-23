@@ -49,17 +49,22 @@ This business website is intentionally a simple WhatsApp-first storefront. **The
 
 The website has no customer details form. Customer details are exchanged only in WhatsApp after the customer chooses to send a message. The website does not collect or transmit personal details to a separate backend.
 
-## Static hosting with GitHub Pages
+## Deployment — Cloudflare Pages
 
-This repository is published as ordinary static files from the `main` branch. It does not use GitHub Actions, workflow tokens, a build pipeline, Cloudflare Workers, a server-side runtime or a database.
+This repository is deployed as a static site on **Cloudflare Pages**. The GitHub repository's `main` branch is the source of truth; Cloudflare Pages builds and publishes the root of that branch when new commits are pushed.
 
-To enable GitHub Pages once:
+Configure the Cloudflare Pages project with:
 
-1. Open **Settings → Pages** in this repository.
-2. Under **Build and deployment → Source**, select **Deploy from a branch**.
-3. Select branch **main** and folder **/(root)**, then save.
+- **Connect to Git:** `narayananagapuri25/Lalitha-Pickles-Snacks`
+- **Production branch:** `main`
+- **Framework preset:** `None` (static HTML/CSS/JavaScript)
+- **Build command:** leave empty
+- **Build output directory:** `/` (the repository root; use the root directory option shown by the Cloudflare dashboard)
+- **Root directory:** `/` (repository root)
 
-After this one-time setting, GitHub Pages publishes the static files directly from the root of `main` whenever the branch changes. No workflow or deployment token is required.
+There is no Node build step, package installation, GitHub Pages deployment, GitHub Actions publish workflow, Cloudflare Worker, server-side runtime or database required. Preview deployments may be used for non-production branches; only merges or pushes to `main` should update the production site.
+
+After a push, verify the latest deployment in **Cloudflare Dashboard → Workers & Pages → lalitha-pickles-snacks → Deployments** and confirm the production URL serves the latest `index.html`, `styles.css`, `app.js` and assets.
 
 ## Business operations not yet connected
 
