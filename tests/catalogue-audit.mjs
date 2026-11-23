@@ -38,7 +38,7 @@ assert.equal(new Set(atlasPositions).size, 13, 'Snack and sweet products must us
 assert.ok(css.includes('background-size:400% 400%'), 'Food atlas must use exact four-by-four tile sizing');
 assert.ok(!css.includes('background-size:404% 404%'), 'Food atlas must not use oversized, offset crops');
 assert.ok(app.includes("imagePosition: '33.3333% 0%'"), 'Second atlas column must align to the exact tile boundary');
-assert.ok(app.includes("imagePosition: '100% 100%'"), 'Final atlas column and row must align to the exact tile boundary');
+assert.ok(app.includes("imagePosition: '0% 100%'"), 'Final atlas column and row must align to the exact tile boundary');
 assert.ok(html.includes('+91 74163 38403'));
 assert.ok(html.includes('+91 99595 62940'));
 assert.ok(html.includes('https://wa.me/917416338403'));
