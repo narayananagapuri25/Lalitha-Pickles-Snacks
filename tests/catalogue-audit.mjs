@@ -40,6 +40,7 @@ assert.ok(!css.includes('background-size:404% 404%'), 'Food atlas must not use o
 assert.ok(app.includes("imagePosition: '33.3333% 0%'"), 'Second atlas column must align to the exact tile boundary');
 assert.ok(app.includes("imagePosition: '0% 100%'"), 'Final atlas column and row must align to the exact tile boundary');
 assert.ok(app.includes('8e49fa84-8f86-4403-88f9-52707cfcaf05.webp'), 'Usiri Amla must use the high-resolution product photo');
+assert.ok(app.includes('1f2c0851-13a1-4988-b8fc-c42b5409755c.webp'), 'Lemon must use the high-resolution product photo');
 assert.ok(html.includes('eaa1d2c1-6c9a-466a-8c7f-8010b923ce85.webp'), 'Promise section must use the high-resolution Gongura photo');
 assert.ok(html.includes('+91 74163 38403'));
 assert.ok(html.includes('+91 99595 62940'));
