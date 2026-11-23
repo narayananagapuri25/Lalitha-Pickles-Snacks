@@ -6,6 +6,7 @@ import { fileURLToPath } from 'node:url';
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const app = readFileSync(join(root, 'app.js'), 'utf8');
 const html = readFileSync(join(root, 'index.html'), 'utf8');
+const css = readFileSync(join(root, 'styles.css'), 'utf8');
 const ids = [...app.matchAll(/\{ id: '([^']+)'/g)].map((match) => match[1]);
 assert.equal(ids.length, 20, `Expected 20 menu products, found ${ids.length}`);
 assert.equal(new Set(ids).size, ids.length, 'Product IDs must be unique');
@@ -28,9 +29,16 @@ for (const [id, price] of Object.entries({ chekkalu: 400, murukulu: 400, mixture
   const line = app.split('\n').find((row) => row.includes(`id: '${id}'`));
   assert.ok(line?.includes(`price: ${price}`), `Unexpected price for ${id}`);
 }
-for (const image of ['mango.webp', 'usiri-amla.webp', 'lemon.webp', 'allam-sweet.webp', 'gongura.webp', 'sesame-mango.webp', 'tomato.webp', 'snacks-assortment.webp', 'sweets-assortment.webp', 'icon-192.png', 'icon-512.png', 'apple-touch-icon.png']) {
+for (const image of ['mango.webp', 'usiri-amla.webp', 'lemon.webp', 'allam-sweet.webp', 'gongura.webp', 'sesame-mango.webp', 'tomato.webp', 'icon-192.png', 'icon-512.png', 'apple-touch-icon.png']) {
   assert.ok(readdirSync(join(root, 'assets')).includes(image), `Missing asset ${image}`);
 }
+const atlasPositions = [...app.matchAll(/imagePosition: '([^']+)'/g)].map((match) => match[1]);
+assert.equal(atlasPositions.length, 13, 'All 13 snack and sweet products must have atlas crops');
+assert.equal(new Set(atlasPositions).size, 13, 'Snack and sweet products must use unique atlas crops');
+assert.ok(css.includes('background-size:400% 400%'), 'Food atlas must use exact four-by-four tile sizing');
+assert.ok(!css.includes('background-size:404% 404%'), 'Food atlas must not use oversized, offset crops');
+assert.ok(app.includes("imagePosition: '33.3333% 0%'"), 'Second atlas column must align to the exact tile boundary');
+assert.ok(app.includes("imagePosition: '100% 100%'"), 'Final atlas column and row must align to the exact tile boundary');
 assert.ok(html.includes('+91 74163 38403'));
 assert.ok(html.includes('+91 99595 62940'));
 assert.ok(html.includes('https://wa.me/917416338403'));
