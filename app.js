@@ -2,7 +2,7 @@
 
 const PRODUCTS = [
   { id: 'mango', name: 'Mango', category: 'pickles', image: 'assets/mango.webp', imageAlt: 'Homemade mango pickle in a serving bowl', prices: { '250 g': 150, '500 g': 300, '1 kg': 550 } },
-  { id: 'usiri-amla', name: 'Usiri (Amla)', category: 'pickles', image: 'assets/usiri-amla.webp', imageAlt: 'Homemade usiri amla pickle in a serving bowl', prices: { '250 g': 150, '500 g': 300, '1 kg': 550 } },
+  { id: 'usiri-amla', name: 'Usiri (Amla)', category: 'pickles', image: 'https://d2ol7oe51mr4n9.cloudfront.net/user_3JhHYSnxjWx3r7xsCRdqAg9xlbY/8e49fa84-8f86-4403-88f9-52707cfcaf05.webp', imageAlt: 'Traditional homemade Usiri Amla pickle with whole Indian gooseberries in a brass bowl', prices: { '250 g': 150, '500 g': 300, '1 kg': 550 } },
   { id: 'lemon', name: 'Lemon', category: 'pickles', image: 'assets/lemon.webp', imageAlt: 'Homemade lemon pickle in a serving bowl', prices: { '250 g': 150, '500 g': 300, '1 kg': 550 } },
   { id: 'allam-sweet', name: 'Allam (Sweet)', category: 'pickles', image: 'assets/allam-sweet.webp', imageAlt: 'Homemade sweet ginger pickle in a serving bowl', prices: { '250 g': 200, '500 g': 400, '1 kg': 650 } },
   { id: 'gongura', name: 'Gongura', category: 'pickles', image: 'https://d2ol7oe51mr4n9.cloudfront.net/user_3JhHYSnxjWx3r7xsCRdqAg9xlbY/eaa1d2c1-6c9a-466a-8c7f-8010b923ce85.webp', imageAlt: 'High-resolution traditional homemade gongura pickle in a brass bowl', prices: { '250 g': 150, '500 g': 300, '1 kg': 500 } },
