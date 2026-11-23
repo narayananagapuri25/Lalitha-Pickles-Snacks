@@ -8,19 +8,19 @@ const PRODUCTS = [
   { id: 'gongura', name: 'Gongura', category: 'pickles', image: 'assets/gongura.webp', imageAlt: 'Homemade gongura pickle in a serving bowl', prices: { '250 g': 150, '500 g': 300, '1 kg': 500 } },
   { id: 'sesame-mango', name: 'Sesame Mango', category: 'pickles', image: 'assets/sesame-mango.webp', imageAlt: 'Homemade sesame mango pickle in a serving bowl', prices: { '250 g': 200, '500 g': 400, '1 kg': 750 } },
   { id: 'tomato', name: 'Tomato', category: 'pickles', image: 'assets/tomato.webp', imageAlt: 'Homemade tomato pickle in a serving bowl', prices: { '250 g': 100, '500 g': 200, '1 kg': 400 } },
-  { id: 'chekkalu', name: 'Chekkalu', category: 'snacks', price: 400, weight: '1 kg', image: 'assets/snacks-assortment.webp', imageAlt: 'Traditional Telangana snacks assortment; representative image', imageTag: 'Snack assortment' },
-  { id: 'murukulu', name: 'Murukulu', category: 'snacks', price: 400, weight: '1 kg', image: 'assets/snacks-assortment.webp', imageAlt: 'Traditional Telangana snacks assortment; representative image', imageTag: 'Snack assortment' },
-  { id: 'mixture', name: 'Mixture', category: 'snacks', price: 400, weight: '1 kg', image: 'assets/snacks-assortment.webp', imageAlt: 'Traditional Telangana snacks assortment; representative image', imageTag: 'Snack assortment' },
-  { id: 'sakinalu', name: 'Sakinalu', category: 'snacks', price: 400, weight: '1 kg', image: 'assets/snacks-assortment.webp', imageAlt: 'Traditional Telangana snacks assortment; representative image', imageTag: 'Snack assortment' },
-  { id: 'arshalu', name: 'Arshalu', category: 'snacks', price: 400, weight: '1 kg', image: 'assets/snacks-assortment.webp', imageAlt: 'Traditional Telangana snacks assortment; representative image', imageTag: 'Snack assortment' },
-  { id: 'boondi', name: 'Boondi', category: 'snacks', price: 400, weight: '1 kg', image: 'assets/snacks-assortment.webp', imageAlt: 'Traditional Telangana snacks assortment; representative image', imageTag: 'Snack assortment' },
-  { id: 'chekodi', name: 'Chekodi', category: 'snacks', price: 400, weight: '1 kg', image: 'assets/snacks-assortment.webp', imageAlt: 'Traditional Telangana snacks assortment; representative image', imageTag: 'Snack assortment' },
-  { id: 'ragi-laddu', name: 'Ragi Laddu', category: 'sweets', price: 500, weight: '1 kg', image: 'assets/sweets-assortment.webp', imageAlt: 'Traditional Indian sweets assortment; representative image', imageTag: 'Sweets assortment' },
-  { id: 'flax-seed-laddu', name: 'Flax Seed Laddu', category: 'sweets', price: 500, weight: '1 kg', image: 'assets/sweets-assortment.webp', imageAlt: 'Traditional Indian sweets assortment; representative image', imageTag: 'Sweets assortment' },
-  { id: 'sununda', name: 'Sununda', category: 'sweets', price: 600, weight: '1 kg', image: 'assets/sweets-assortment.webp', imageAlt: 'Traditional Indian sweets assortment; representative image', imageTag: 'Sweets assortment' },
-  { id: 'nuvvula-laddu', name: 'Nuvvula Laddu', category: 'sweets', price: 500, weight: '1 kg', image: 'assets/sweets-assortment.webp', imageAlt: 'Traditional Indian sweets assortment; representative image', imageTag: 'Sweets assortment' },
-  { id: 'palli-laddu', name: 'Palli Laddu', category: 'sweets', price: 500, weight: '1 kg', image: 'assets/sweets-assortment.webp', imageAlt: 'Traditional Indian sweets assortment; representative image', imageTag: 'Sweets assortment' },
-  { id: 'dry-fruit-laddu', name: 'Dry Fruit Laddu', category: 'sweets', price: 1400, weight: '1 kg', image: 'assets/sweets-assortment.webp', imageAlt: 'Traditional Indian sweets assortment; representative image', imageTag: 'Sweets assortment' }
+  { id: 'chekkalu', name: 'Chekkalu', category: 'snacks', price: 400, weight: '1 kg', imageSymbol: 'chekkalu', imageAlt: 'Crisp round Chekkalu rice-flour crackers with sesame', imageTag: 'Traditional snack' },
+  { id: 'murukulu', name: 'Murukulu', category: 'snacks', price: 400, weight: '1 kg', imageSymbol: 'murukulu', imageAlt: 'Golden spiral-shaped Murukulu rice-flour snack', imageTag: 'Traditional snack' },
+  { id: 'mixture', name: 'Mixture', category: 'snacks', price: 400, weight: '1 kg', imageSymbol: 'mixture', imageAlt: 'Savory mixture with sev, peanuts and crunchy boondi', imageTag: 'Traditional snack' },
+  { id: 'sakinalu', name: 'Sakinalu', category: 'snacks', price: 400, weight: '1 kg', imageSymbol: 'sakinalu', imageAlt: 'Traditional Telangana Sakinalu sesame rice-flour loops', imageTag: 'Traditional snack' },
+  { id: 'arshalu', name: 'Arshalu', category: 'snacks', price: 400, weight: '1 kg', imageSymbol: 'arshalu', imageAlt: 'Golden jaggery-coated Arshalu sweet rice discs', imageTag: 'Traditional snack' },
+  { id: 'boondi', name: 'Boondi', category: 'snacks', price: 400, weight: '1 kg', imageSymbol: 'boondi', imageAlt: 'Tiny golden fried gram-flour Boondi pearls', imageTag: 'Traditional snack' },
+  { id: 'chekodi', name: 'Chekodi', category: 'snacks', price: 400, weight: '1 kg', imageSymbol: 'chekodi', imageAlt: 'Crispy golden ring-shaped Chekodi snack', imageTag: 'Traditional snack' },
+  { id: 'ragi-laddu', name: 'Ragi Laddu', category: 'sweets', price: 500, weight: '1 kg', imageSymbol: 'ragi-laddu', imageAlt: 'Dark Ragi Laddu made with finger millet', imageTag: 'Traditional sweet' },
+  { id: 'flax-seed-laddu', name: 'Flax Seed Laddu', category: 'sweets', price: 500, weight: '1 kg', imageSymbol: 'flax-seed-laddu', imageAlt: 'Flax Seed Laddu with visible flax seeds', imageTag: 'Traditional sweet' },
+  { id: 'sununda', name: 'Sununda', category: 'sweets', price: 600, weight: '1 kg', imageSymbol: 'sununda', imageAlt: 'Golden Sununda roasted-flour sweet balls', imageTag: 'Traditional sweet' },
+  { id: 'nuvvula-laddu', name: 'Nuvvula Laddu', category: 'sweets', price: 500, weight: '1 kg', imageSymbol: 'nuvvula-laddu', imageAlt: 'Nuvvula Laddu coated with sesame seeds', imageTag: 'Traditional sweet' },
+  { id: 'palli-laddu', name: 'Palli Laddu', category: 'sweets', price: 500, weight: '1 kg', imageSymbol: 'palli-laddu', imageAlt: 'Palli Laddu made with peanuts and jaggery', imageTag: 'Traditional sweet' },
+  { id: 'dry-fruit-laddu', name: 'Dry Fruit Laddu', category: 'sweets', price: 1400, weight: '1 kg', imageSymbol: 'dry-fruit-laddu', imageAlt: 'Dry Fruit Laddu with nuts and dried fruit', imageTag: 'Traditional sweet' }
 ];
 
 const CATEGORY_NAMES = { pickles: 'Pickles', snacks: 'Snacks', sweets: 'Sweets' };
@@ -49,9 +49,11 @@ function renderProducts() {
   $('#productGrid').innerHTML = results.map((product) => {
     const imageAlt = product.imageAlt || `${product.name} pickle in a serving bowl`;
     const imageTag = product.imageTag || 'Homemade pickle';
-    const imageMarkup = product.image
-      ? `<img src="${product.image}" alt="${escapeHtml(imageAlt)}" loading="lazy"><span class="product-tag">${escapeHtml(imageTag)}</span>`
-      : `<div class="product-emoji" aria-hidden="true">${product.emoji || ''}</div><span class="product-tag">Product photo coming soon</span>`;
+    const imageMarkup = product.imageSymbol
+      ? `<svg class="product-illustration" viewBox="0 0 480 320" role="img" aria-label="${escapeHtml(imageAlt)}" focusable="false"><use href="assets/product-illustrations.svg#${escapeHtml(product.imageSymbol)}"></use></svg><span class="product-tag">${escapeHtml(imageTag)}</span>`
+      : product.image
+        ? `<img src="${product.image}" alt="${escapeHtml(imageAlt)}" loading="lazy"><span class="product-tag">${escapeHtml(imageTag)}</span>`
+        : `<div class="product-emoji" aria-hidden="true">${product.emoji || ''}</div><span class="product-tag">Product photo coming soon</span>`;
     const configuration = product.prices
       ? `<label class="sr-only" for="size-${product.id}">Choose pack size for ${escapeHtml(product.name)}</label><select class="size-select" id="size-${product.id}" data-size-for="${product.id}">${Object.entries(product.prices).map(([weight, price]) => `<option value="${weight}">${weight} · ${money(price)}</option>`).join('')}</select><strong class="product-price" data-price-for="${product.id}">${money(Object.values(product.prices)[0])}</strong>`
       : `<span class="fixed-weight">${product.weight}</span><strong class="product-price">${money(product.price)}</strong>`;
@@ -254,8 +256,12 @@ function validateCatalogue() {
     if (JSON.stringify(actual) !== JSON.stringify(values)) throw new Error(`Pickle price mismatch: ${id}`);
   }
   if (PRODUCTS.length !== 20) throw new Error(`Expected 20 catalogue items, got ${PRODUCTS.length}`);
-  const missingPhotos = PRODUCTS.filter((product) => !product.image || !product.imageAlt);
-  if (missingPhotos.length) throw new Error(`Missing product photos: ${missingPhotos.map((product) => product.id).join(', ')}`);
+  const missingPhotos = PRODUCTS.filter((product) => !(product.image || product.imageSymbol) || !product.imageAlt);
+  if (missingPhotos.length) throw new Error(`Missing product images: ${missingPhotos.map((product) => product.id).join(', ')}`);
+  const illustrated = PRODUCTS.filter((product) => product.imageSymbol);
+  if (new Set(illustrated.map((product) => product.imageSymbol)).size !== illustrated.length) {
+    throw new Error('Duplicate product illustration symbols detected');
+  }
 }
 
 validateCatalogue();
