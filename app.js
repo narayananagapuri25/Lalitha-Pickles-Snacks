@@ -9,18 +9,18 @@ const PRODUCTS = [
   { id: 'sesame-mango', name: 'Sesame Mango', category: 'pickles', image: 'assets/sesame-mango.webp', imageAlt: 'Homemade sesame mango pickle in a serving bowl', prices: { '250 g': 200, '500 g': 400, '1 kg': 750 } },
   { id: 'tomato', name: 'Tomato', category: 'pickles', image: 'assets/tomato.webp', imageAlt: 'Homemade tomato pickle in a serving bowl', prices: { '250 g': 100, '500 g': 200, '1 kg': 400 } },
   { id: 'chekkalu', name: 'Chekkalu', category: 'snacks', price: 400, weight: '1 kg', imagePosition: '0% 0%', imageAlt: 'Crisp round Chekkalu rice-flour crackers with sesame', imageTag: 'Traditional snack' },
-  { id: 'murukulu', name: 'Murukulu', category: 'snacks', price: 400, weight: '1 kg', imagePosition: '33.0033% 0%', imageAlt: 'Golden spiral-shaped Murukulu rice-flour snack', imageTag: 'Traditional snack' },
-  { id: 'mixture', name: 'Mixture', category: 'snacks', price: 400, weight: '1 kg', imagePosition: '66.0066% 0%', imageAlt: 'Savory mixture with sev, peanuts and crunchy boondi', imageTag: 'Traditional snack' },
-  { id: 'sakinalu', name: 'Sakinalu', category: 'snacks', price: 400, weight: '1 kg', imagePosition: '99.0099% 0%', imageAlt: 'Traditional Telangana Sakinalu sesame rice-flour loops', imageTag: 'Traditional snack' },
-  { id: 'arshalu', name: 'Arshalu', category: 'snacks', price: 400, weight: '1 kg', imagePosition: '0% 33.0033%', imageAlt: 'Golden jaggery-coated Arshalu sweet rice discs', imageTag: 'Traditional snack' },
-  { id: 'boondi', name: 'Boondi', category: 'snacks', price: 400, weight: '1 kg', imagePosition: '33.0033% 33.0033%', imageAlt: 'Tiny golden fried gram-flour Boondi pearls', imageTag: 'Traditional snack' },
-  { id: 'chekodi', name: 'Chekodi', category: 'snacks', price: 400, weight: '1 kg', imagePosition: '66.0066% 33.0033%', imageAlt: 'Crispy golden ring-shaped Chekodi snack', imageTag: 'Traditional snack' },
-  { id: 'ragi-laddu', name: 'Ragi Laddu', category: 'sweets', price: 500, weight: '1 kg', imagePosition: '99.0099% 33.0033%', imageAlt: 'Dark Ragi Laddu made with finger millet', imageTag: 'Traditional sweet' },
-  { id: 'flax-seed-laddu', name: 'Flax Seed Laddu', category: 'sweets', price: 500, weight: '1 kg', imagePosition: '0% 66.0066%', imageAlt: 'Flax Seed Laddu with visible flax seeds', imageTag: 'Traditional sweet' },
-  { id: 'sununda', name: 'Sununda', category: 'sweets', price: 600, weight: '1 kg', imagePosition: '33.0033% 66.0066%', imageAlt: 'Golden Sununda roasted-flour sweet balls', imageTag: 'Traditional sweet' },
-  { id: 'nuvvula-laddu', name: 'Nuvvula Laddu', category: 'sweets', price: 500, weight: '1 kg', imagePosition: '66.0066% 66.0066%', imageAlt: 'Nuvvula Laddu coated with sesame seeds', imageTag: 'Traditional sweet' },
-  { id: 'palli-laddu', name: 'Palli Laddu', category: 'sweets', price: 500, weight: '1 kg', imagePosition: '99.0099% 66.0066%', imageAlt: 'Palli Laddu made with peanuts and jaggery', imageTag: 'Traditional sweet' },
-  { id: 'dry-fruit-laddu', name: 'Dry Fruit Laddu', category: 'sweets', price: 1400, weight: '1 kg', imagePosition: '0% 99.0099%', imageAlt: 'Dry Fruit Laddu with nuts and dried fruit', imageTag: 'Traditional sweet' }
+  { id: 'murukulu', name: 'Murukulu', category: 'snacks', price: 400, weight: '1 kg', imagePosition: '33.3333% 0%', imageAlt: 'Golden spiral-shaped Murukulu rice-flour snack', imageTag: 'Traditional snack' },
+  { id: 'mixture', name: 'Mixture', category: 'snacks', price: 400, weight: '1 kg', imagePosition: '66.6667% 0%', imageAlt: 'Savory mixture with sev, peanuts and crunchy boondi', imageTag: 'Traditional snack' },
+  { id: 'sakinalu', name: 'Sakinalu', category: 'snacks', price: 400, weight: '1 kg', imagePosition: '100% 0%', imageAlt: 'Traditional Telangana Sakinalu sesame rice-flour loops', imageTag: 'Traditional snack' },
+  { id: 'arshalu', name: 'Arshalu', category: 'snacks', price: 400, weight: '1 kg', imagePosition: '0% 33.3333%', imageAlt: 'Golden jaggery-coated Arshalu sweet rice discs', imageTag: 'Traditional snack' },
+  { id: 'boondi', name: 'Boondi', category: 'snacks', price: 400, weight: '1 kg', imagePosition: '33.3333% 33.3333%', imageAlt: 'Tiny golden fried gram-flour Boondi pearls', imageTag: 'Traditional snack' },
+  { id: 'chekodi', name: 'Chekodi', category: 'snacks', price: 400, weight: '1 kg', imagePosition: '66.6667% 33.3333%', imageAlt: 'Crispy golden ring-shaped Chekodi snack', imageTag: 'Traditional snack' },
+  { id: 'ragi-laddu', name: 'Ragi Laddu', category: 'sweets', price: 500, weight: '1 kg', imagePosition: '100% 33.3333%', imageAlt: 'Dark Ragi Laddu made with finger millet', imageTag: 'Traditional sweet' },
+  { id: 'flax-seed-laddu', name: 'Flax Seed Laddu', category: 'sweets', price: 500, weight: '1 kg', imagePosition: '0% 66.6667%', imageAlt: 'Flax Seed Laddu with visible flax seeds', imageTag: 'Traditional sweet' },
+  { id: 'sununda', name: 'Sununda', category: 'sweets', price: 600, weight: '1 kg', imagePosition: '33.3333% 66.6667%', imageAlt: 'Golden Sununda roasted-flour sweet balls', imageTag: 'Traditional sweet' },
+  { id: 'nuvvula-laddu', name: 'Nuvvula Laddu', category: 'sweets', price: 500, weight: '1 kg', imagePosition: '66.6667% 66.6667%', imageAlt: 'Nuvvula Laddu coated with sesame seeds', imageTag: 'Traditional sweet' },
+  { id: 'palli-laddu', name: 'Palli Laddu', category: 'sweets', price: 500, weight: '1 kg', imagePosition: '100% 66.6667%', imageAlt: 'Palli Laddu made with peanuts and jaggery', imageTag: 'Traditional sweet' },
+  { id: 'dry-fruit-laddu', name: 'Dry Fruit Laddu', category: 'sweets', price: 1400, weight: '1 kg', imagePosition: '0% 100%', imageAlt: 'Dry Fruit Laddu with nuts and dried fruit', imageTag: 'Traditional sweet' }
 ];
 
 const CATEGORY_NAMES = { pickles: 'Pickles', snacks: 'Snacks', sweets: 'Sweets' };
