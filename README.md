@@ -32,9 +32,9 @@ Customers add products to the bag and send the prepared order through WhatsApp t
 
 Product names and prices are based on the menu images provided for this repository. Pickle prices are shown for 250 g / 500 g / 1 kg. Snack and sweet prices are shown for 1 kg. Update `PRODUCTS` in `app.js` only when the business supplies an authorised catalogue change.
 
-## Deployment
+## Hosting architecture
 
-The site can be hosted on any static hosting service. The site is served as ordinary static files over HTTPS. It does not register a service worker, run a server-side Worker, or require a backend. Configure the hosting provider to publish the repository root; no server-side credentials are required.
+The storefront is a static HTML, CSS and JavaScript site. It does not register a service worker, run a server-side Worker, or require a backend. Cloudflare Pages publishes the files directly from the repository root.
 
 ## Ordering model — WhatsApp only
 
@@ -59,8 +59,8 @@ Configure the Cloudflare Pages project with:
 - **Production branch:** `main`
 - **Framework preset:** `None` (static HTML/CSS/JavaScript)
 - **Build command:** leave empty
-- **Build output directory:** `/` (the repository root; use the root directory option shown by the Cloudflare dashboard)
-- **Root directory:** `/` (repository root)
+- **Build output directory:** `.` (the repository root)
+- **Root directory:** `/` (repository root; leave the default if the dashboard shows the repository root)
 
 There is no Node build step, package installation, GitHub Pages deployment, GitHub Actions publish workflow, Cloudflare Worker, server-side runtime or database required. Preview deployments may be used for non-production branches; only merges or pushes to `main` should update the production site.
 
