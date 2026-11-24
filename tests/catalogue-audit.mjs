@@ -43,6 +43,7 @@ assert.ok(app.includes('8e49fa84-8f86-4403-88f9-52707cfcaf05.webp'), 'Usiri Amla
 assert.ok(app.includes('1f2c0851-13a1-4988-b8fc-c42b5409755c.webp'), 'Lemon must use the high-resolution product photo');
 assert.ok(app.includes('696a15fc-db51-4141-9a75-2ffe7fa45874.webp'), 'Allam Sweet must use the high-resolution product photo');
 assert.ok(app.includes('b4b395d6-a1c3-41ea-a753-2d3e6bcdf7bc.webp'), 'Sesame Mango must use the high-resolution product photo');
+assert.ok(app.includes('316fd65d-3a88-48ed-82d8-7892d160864d.webp'), 'Tomato must use the high-resolution product photo');
 assert.ok(html.includes('eaa1d2c1-6c9a-466a-8c7f-8010b923ce85.webp'), 'Promise section must use the high-resolution Gongura photo');
 assert.ok(html.includes('+91 74163 38403'));
 assert.ok(html.includes('+91 99595 62940'));
